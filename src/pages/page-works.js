@@ -1,8 +1,8 @@
 import React from 'react';
 import Footer from '../Footer';
 import MovieCat from '../images/movie-cat-2.jpg';
-import Capstone from '../images/Capstone.jpg'; 
-import Portfolio from '../images/Portfolio.jpg';   
+import Capstone from '../images/Capstone-2.jpg'; 
+import Portfolio from '../images/Portfolio-2.jpg';   
 
 function PageWorks() {
     return (

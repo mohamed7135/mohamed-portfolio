@@ -51,12 +51,13 @@ function PageAbout() {
 
   return (
     <div className="about">
-      <h2>About Me</h2>
       <section className="animation">
         <div ref={factRef} className="facts">
           {facts[0]}
         </div>
       </section>
+      <h2>About Me</h2>
+      <br />
       <p>Welcome to my corner of the web! I'm an ardent Front-End Web Developer with a perpetual thirst for knowledge and growth. My journey in web development is not just a career but a passionate exploration. I find joy in the intricate dance between creativity and functionality, constantly seeking to enhance the digital landscape with innovative and user-centric interfaces.
         <br />
         My motivation is deeply rooted in the belief that web development is an art form, and each line of code is a brushstroke that shapes a unique online experience. I thrive on challenges, viewing them not as obstacles but as opportunities to push the boundaries of what's possible. Beyond mastering languages like JavaScript, HTML5 & CSS/SASS, I bring a holistic approach, incorporating UI/UX design principles and leveraging version control tools like Git.

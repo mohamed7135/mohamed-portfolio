@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 import '../App.css';
 import Footer from '../Footer';
 import MovieCat from '../images/movie-cat-2.jpg';
-import Capstone from '../images/Capstone.jpg';
-import Portfolio from '../images/Portfolio.jpg';
+import Capstone from '../images/Capstone-2.jpg';
+import Portfolio from '../images/Portfolio-2.jpg';
 import Boat from '../boat.jpg';
 
 
@@ -84,9 +84,9 @@ function PageHome() {
           <h3>React Movie Project (Movie Cat)</h3>
           <img src={MovieCat} alt="Movie Cat" />
           <p>Description of the React Movie Project.</p>
-          <NavLink to="/works">
-            <button>See More</button>
-          </NavLink>
+          <a href="/works"> {/* Adjust the link accordingly */}
+          <button className="button-arounder">Back to Home</button>
+        </a>
         </div>
 
         {/* Project 2: Capstone Project */}
@@ -94,9 +94,9 @@ function PageHome() {
           <h3>Capstone Project</h3>
           <img src={Capstone} alt="Capstone Project" />
           <p>Description of the Capstone Project.</p>
-          <NavLink to="/works">
-            <button>See More</button>
-          </NavLink>
+          <a href="/works"> {/* Adjust the link accordingly */}
+          <button>Back to Home</button>
+        </a>
         </div>
 
         {/* Project 3: Portfolio */}
@@ -104,9 +104,9 @@ function PageHome() {
           <h3>Portfolio</h3>
           <img src={Portfolio} alt="Portfolio" />
           <p>Description of the Portfolio.</p>
-          <NavLink to="/works">
-            <button>See More</button>
-          </NavLink>
+          <a href="/works"> {/* Adjust the link accordingly */}
+          <button>Back to Home</button>
+        </a>
         </div>
         </div>
       </div>
