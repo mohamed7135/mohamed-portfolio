@@ -1,0 +1,428 @@
+/* Global styles */
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Main app styles */
+#app {
+  z-index: 100;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  padding-bottom: 4vmin;
+  height: 90vh;
+  width: 100%;
+  background: #ede8e2;
+  color: #3a3535;
+}
+
+body {
+  display: grid;
+  padding: 3vmin;
+  background: #e6ded7;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+
+.title {
+  /* padding-left: 1em; */
+  /* padding-bottom: em; */
+  grid-column: 1 / -1;
+  grid-row: 1;
+  font-family: "Prata", serif;
+  font-size: 8vw;
+  width: 100%;
+  z-index: 2;
+
+  > .title-inner {
+    display: inline-block;
+  }
+}
+
+@keyframes text-clip {
+  from {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes outer-left {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes inner-left {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.cafe,
+.mozart {
+  animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.title-inner {
+  display: inline-block;
+  animation: inner-left 1s 1s ease both;
+}
+
+.cafe-inner {
+  display: inline-block;
+  animation: inner-left 1s 1s ease both,
+    text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.mozart-inner {
+  animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.title {
+  animation: outer-left 1s 1s ease both;
+}
+
+.cafe {
+  > .cafe-inner {
+    display: inline-block;
+  }
+}
+
+.mozart {
+  display: inline-block;
+}
+
+.image {
+  grid-row: 1;
+  grid-column: 2;
+  margin-left: -2rem;
+  opacity: 0.7;
+  animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+}
+
+@keyframes image-in {
+  from {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+body:active * {
+  animation: none !important;
+}
+
+/* Additional styles for the About section */
+.about {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+h2, .about p {
+  line-height: 1.5;
+  display: inline;
+  background-image: linear-gradient(
+    transparent 50%,
+    #e1fffe 50%,
+    #b0f8ff 85%,
+    transparent 85%,
+    transparent 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+}
+
+/* Animation styles for the About section */
+/* .animated h2,
+.animated .about p {
+  animation: animatedBackground 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s forwards;
+}
+
+@keyframes animatedBackground {
+  to {
+    background-size: 100% 100%;
+  }
+} */
+
+.skills {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.skills h2, .skills img {
+  line-height: 1.5;
+  display: inline;
+  background-image: linear-gradient(
+    transparent 50%,
+    #e1fffe 50%,
+    #b0f8ff 85%,
+    transparent 85%,
+    transparent 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+}
+
+/* .skills .icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+} */
+
+.skills img {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.skills img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation styles for the Skills section */
+.animated .skills h2,
+.animated .skills img {
+  animation: animatedBackground 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s forwards;
+}
+
+@keyframes animatedBackground {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+.works {
+  text-align: center;
+}
+
+/* Add this CSS to your App.css file */
+.project img {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* This centers the image horizontally */
+}
+/* Add this to your existing CSS */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  /* background-color: #FFE5D4; */
+}
+
+.icon-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.icon-row svg {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.icon-row svg:hover {
+  fill: #007BFF; /* Change the color on hover as needed */
+}
+
+/* Add this to your existing CSS */
+.project {
+  text-align: center;
+  padding: 2rem;
+}
+
+.project img {
+  width: 100%;
+  max-width: 400px; /* Adjust the max-width as needed */
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.icon-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icon-row img {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.project p {
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  line-height: 1.5;
+}
+
+.project button {
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  background-color: #007BFF; /* Adjust the color as needed */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.project button:hover {
+  background-color: #0056b3; /* Change the color on hover as needed */
+}
+
+.about .animation {
+  overflow: hidden;
+  height: 50px;
+  margin-left: 1rem;
+}
+
+.about .animation .facts {
+  padding: 0.25rem 0.75rem;
+  height: 2.81rem;
+  margin-bottom: 2.81rem;
+  display: inline-block;
+  transition: opacity 0.5s;
+}
+
+.about .animation .fadeOut {
+  opacity: 0;
+}
+
+/* .about h2, */
+
+.about .animation .facts {
+  font-family: 'Arial', sans-serif;
+  font-size: 2rem;
+  color: #3498db;
+  background-color: #ecf0f1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Add this CSS for the gallery */
+.gallery {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  max-width: 100%;
+}
+
+.gallery figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 1 / 1; /* Set the aspect ratio to maintain the original image aspect ratio */
+  object-fit: cover; /* Ensure the image covers the entire container */
+  transition: transform 1000ms; /* Add the transition effect for the hover animation */
+}
+
+.gallery figure::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(0, 0, 0, 0.5);
+  transform-origin: center;
+  opacity: 0;
+  transform: scale(2);
+  transition: opacity 300ms;
+}
+
+.gallery figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  font-size: 1.2rem;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 600ms, transform 600ms;
+}
+
+.gallery a:is(:hover, :focus) figure::after {
+  opacity: 1;
+}
+
+.gallery a:is(:hover, :focus) figcaption {
+  opacity: 1;
+  transition: opacity 600ms;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .gallery figcaption {
+    transform: translate3d(0, 2rem, 0);
+  }
+  
+  .gallery figure::after {
+    border-radius: 50%;
+    opacity: 1;
+    transform: scale(0);
+    transition: transform 900ms;
+  }
+  
+  .gallery a:is(:hover, :focus) figure::after {
+    transform: scale(2.5);
+  }
+
+  .gallery a:is(:hover, :focus) figcaption {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 600ms 400ms, transform 600ms 400ms;
+  }
+
+  .gallery a:is(:hover, :focus) img {
+    transform: scale(1.2);
+  }
+}
+
+.works-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
