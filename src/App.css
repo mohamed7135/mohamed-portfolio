@@ -132,6 +132,7 @@ body:active * {
 .about {
   text-align: center;
   padding-top: 2rem;
+  margin-top: 200px;
 }
 
 h2, .about p {
@@ -216,6 +217,7 @@ h2, .about p {
 
 .works {
   text-align: center;
+  margin-top: 200px;
 }
 
 /* Add this CSS to your App.css file */
@@ -246,7 +248,7 @@ h2, .about p {
 }
 
 .icon-row svg:hover {
-  fill: #007BFF; /* Change the color on hover as needed */
+  fill: #8E44AD ; 
 }
 
 /* Add this to your existing CSS */
@@ -296,8 +298,9 @@ h2, .about p {
   background-color: #0056b3; 
 } */
 
-.project button {
+ button {
   padding: 0.5rem 1rem;
+  margin: 14px;
   font-size: 16px;
   background-color: #9E947F  ; /* Adjusted color */
   color: #fff;
@@ -308,7 +311,7 @@ h2, .about p {
   transition: background-color 0.3s, transform 0.2s;
 }
 
-.project button:hover {
+ button:hover {
   background-color: #8E44AD     ; 
   transform: scale(1.78);
 }
@@ -343,7 +346,12 @@ h2, .about p {
   border-radius: 5px;
 }
 
-/* Add this CSS for the gallery */
+
+
+.hobbies {
+  text-align: center;
+  margin-top: 250px;
+}
 .gallery {
   list-style: none;
   margin: 0;
@@ -443,4 +451,57 @@ h2, .about p {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+}
+
+/* Your styles for the opened navigation */
+.Navigation.open {
+  background-color: #BBB39F ; /* Background color */
+  width: 100%; /* Full width */
+  height: 100vh; /* Full height */
+  position: fixed; /* Fixed position */
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Your styles for the menu content */
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.menu-content a {
+  color: #fff; /* Text color for links */
+  text-decoration: none;
+  margin: 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.menu-content a:hover {
+  color: #8E44AD; /* Highlight color on hover */
+}
+
+.logo{
+   width: 100px;
+  height: 100px;
+}
+
+.Navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.skillz {
+  text-align: center;
+  margin-top: 200px;
 }

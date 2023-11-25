@@ -5,7 +5,6 @@ import Footer from '../Footer';
 import MovieCat from '../images/movie-cat-2.jpg';
 import Capstone from '../images/Capstone-2.jpg';
 import Portfolio from '../images/Portfolio-2.jpg';
-import Boat from '../boat.jpg';
 
 
 
@@ -74,6 +73,10 @@ function PageHome() {
         <h2>About</h2>
         <br />
         <p>Hello there! I'm a passionate Front-End Web Developer on a perpetual journey of discovery and growth. My love for crafting seamless digital experiences is fueled by a deep commitment to learning and adapting in the ever-evolving world of web development. Beyond the code, you'll find me embracing challenges with enthusiasm, bringing a blend of adaptability and quick learning to every project. My goal? To not just meet expectations but to exceed them, pushing the boundaries of what's possible in the dynamic field of front-end development. Let's create something extraordinary together!</p>
+        <br />
+        <a href="/about">
+          <button className="button-arounder">About Me</button>
+          </a>
       </div>
 
       <div className="works" ref={worksRef}>
@@ -111,6 +114,8 @@ function PageHome() {
         </div>
       </div>
         {/* Skills section */}
+        
+        <div className='skillz'>
         <h2>Skills</h2>
         <div className="skills">
           {/* Icons remain unchanged */}
@@ -125,6 +130,7 @@ function PageHome() {
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop" />
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+        </div>
         </div>
         <Footer />
       </div>

@@ -1,42 +1,34 @@
 // Navigation.js
-
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { HiOutlineMenu } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
+import Logo from './images/logo.png';
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
 
-  const Hamburgericon = (
-    <HiOutlineMenu className='Hamburger' size='40px' color='black' onClick={() => setOpen(!open)} />
+  const HamburgerIcon = (
+    <HiOutlineMenu className={`Hamburger ${open ? 'hidden' : ''}`} size='40px' color='black' onClick={() => setOpen(!open)} />
   );
-  const closeicon = (
-    <AiOutlineClose className='Closebtn' size='40px' color='black' onClick={() => setOpen(!open)} />
+  const CloseIcon = (
+    <AiOutlineClose className={`Closebtn ${!open ? 'hidden' : ''}`} size='40px' color='black' onClick={() => setOpen(!open)} />
   );
 
   return (
-    <nav className='Navigation'>
-      {open ? closeicon : Hamburgericon}
+    <nav className={`Navigation ${open ? 'open' : ''}`}>
+      {open ? CloseIcon : HamburgerIcon}
+      <a href="/"> {/* Adjust the link accordingly */}
+
+      {!open && <img src={Logo} alt="Logo" className="logo" />}
+      </a>
       {open && (
-        <ul>
-          <li>
-            <NavLink to='/' onClick={() => setOpen(false)}>
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to='/about' onClick={() => setOpen(false)}>
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to='/works' onClick={() => setOpen(false)}>
-              Works
-            </NavLink>
-          </li>
+        <div className='menu-content'>
+          <NavLink to='/' onClick={() => setOpen(false)}>Home</NavLink>
+          <NavLink to='/about' onClick={() => setOpen(false)}>About</NavLink>
+          <NavLink to='/works' onClick={() => setOpen(false)}>Works</NavLink>
           {/* Add other navigation links as needed */}
-        </ul>
+        </div>
       )}
     </nav>
   );
