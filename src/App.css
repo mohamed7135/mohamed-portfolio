@@ -1,10 +1,8 @@
-/* Global styles */
 * {
   position: relative;
   box-sizing: border-box;
 }
 
-/* Main app styles */
 #app {
   z-index: 100;
   display: grid;
@@ -26,8 +24,6 @@ body {
 @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
 
 .title {
-  /* padding-left: 1em; */
-  /* padding-bottom: em; */
   grid-column: 1 / -1;
   grid-row: 1;
   font-family: "Prata", serif;
@@ -67,8 +63,8 @@ body {
   }
 }
 
-.cafe,
-.mozart {
+.mo,
+.fwd {
   animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 
@@ -77,13 +73,13 @@ body {
   animation: inner-left 1s 1s ease both;
 }
 
-.cafe-inner {
+.mo-inner {
   display: inline-block;
   animation: inner-left 1s 1s ease both,
     text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 
-.mozart-inner {
+.fwd-inner {
   animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 
@@ -91,13 +87,13 @@ body {
   animation: outer-left 1s 1s ease both;
 }
 
-.cafe {
-  > .cafe-inner {
+.mo {
+  > .mo-inner {
     display: inline-block;
   }
 }
 
-.mozart {
+.fwd {
   display: inline-block;
 }
 
@@ -128,11 +124,12 @@ body:active * {
   animation: none !important;
 }
 
-/* Additional styles for the About section */
 .about {
   text-align: center;
   padding-top: 2rem;
   margin-top: 200px;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 h2, .about p {
@@ -149,17 +146,6 @@ h2, .about p {
   background-size: 0% 100%;
 }
 
-/* Animation styles for the About section */
-/* .animated h2,
-.animated .about p {
-  animation: animatedBackground 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s forwards;
-}
-
-@keyframes animatedBackground {
-  to {
-    background-size: 100% 100%;
-  }
-} */
 
 .skills {
   padding-top: 2rem;
@@ -185,11 +171,6 @@ h2, .about p {
   background-size: 0% 100%;
 }
 
-/* .skills .icon-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-} */
 
 .skills img {
   width: 100px;
@@ -203,7 +184,7 @@ h2, .about p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Animation styles for the Skills section */
+
 .animated .skills h2,
 .animated .skills img {
   animation: animatedBackground 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s forwards;
@@ -220,20 +201,20 @@ h2, .about p {
   margin-top: 200px;
 }
 
-/* Add this CSS to your App.css file */
+
 .project img {
   width: 300px;
   height: auto;
   display: block;
-  margin: 0 auto; /* This centers the image horizontally */
+  margin: 0 auto; 
 }
-/* Add this to your existing CSS */
+
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
-  /* background-color: #FFE5D4; */
+
 }
 
 .icon-row {
@@ -251,7 +232,7 @@ h2, .about p {
   fill: #8E44AD ; 
 }
 
-/* Add this to your existing CSS */
+
 .project {
   text-align: center;
   padding: 2rem;
@@ -259,7 +240,7 @@ h2, .about p {
 
 .project img {
   width: 100%;
-  max-width: 400px; /* Adjust the max-width as needed */
+  max-width: 400px;
   height: auto;
   margin-bottom: 1rem;
 }
@@ -282,27 +263,13 @@ h2, .about p {
   line-height: 1.5;
 }
 
-/* .project button {
-  padding: 0.5rem 1rem;
-  font-size: 16px;
-  background-color: #007BFF;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
 
-.project button:hover {
-  background-color: #0056b3; 
-} */
 
  button {
   padding: 0.5rem 1rem;
   margin: 14px;
   font-size: 16px;
-  background-color: #9E947F  ; /* Adjusted color */
+  background-color: #9E947F  ; 
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -335,7 +302,7 @@ h2, .about p {
   opacity: 0;
 }
 
-/* .about h2, */
+
 
 .about .animation .facts {
   font-family: 'Arial', sans-serif;
@@ -350,7 +317,7 @@ h2, .about p {
 
 .hobbies {
   text-align: center;
-  margin-top: 250px;
+  margin-top: 100px;
 }
 .gallery {
   list-style: none;
@@ -372,9 +339,9 @@ h2, .about p {
   max-width: 100%;
   height: auto;
   display: block;
-  aspect-ratio: 1 / 1; /* Set the aspect ratio to maintain the original image aspect ratio */
-  object-fit: cover; /* Ensure the image covers the entire container */
-  transition: transform 1000ms; /* Add the transition effect for the hover animation */
+  aspect-ratio: 1 / 1; 
+  object-fit: cover; 
+  transition: transform 1000ms; 
 }
 
 .gallery figure::after {
@@ -418,32 +385,32 @@ h2, .about p {
   transition: opacity 600ms;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .gallery figcaption {
-    transform: translate3d(0, 2rem, 0);
-  }
-  
-  .gallery figure::after {
-    border-radius: 50%;
-    opacity: 1;
-    transform: scale(0);
-    transition: transform 900ms;
-  }
-  
-  .gallery a:is(:hover, :focus) figure::after {
-    transform: scale(2.5);
+@media (max-width: 901px) {
+  .gallery figure {
+    position: relative;
   }
 
-  .gallery a:is(:hover, :focus) figcaption {
+  .gallery figure::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+  }
+
+  .gallery figcaption {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-    transition: opacity 600ms 400ms, transform 600ms 400ms;
-  }
-
-  .gallery a:is(:hover, :focus) img {
-    transform: scale(1.2);
+    transition: opacity 600ms, transform 600ms;
+    z-index: 2; 
   }
 }
+
+  
+
 
 .works-flex {
   display: flex;
@@ -453,22 +420,21 @@ h2, .about p {
   align-items: center;
 }
 
-/* Your styles for the opened navigation */
 .Navigation.open {
-  background-color: #BBB39F ; /* Background color */
-  width: 100%; /* Full width */
-  height: 100vh; /* Full height */
-  position: fixed; /* Fixed position */
+  background-color: #BBB39F ; 
+  width: 100%; 
+  height: 100vh;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 1000; /* Ensure it's above other elements */
+  z-index: 1000; 
 }
 
-/* Your styles for the menu content */
+
 .menu-content {
   display: flex;
   flex-direction: column;
@@ -479,15 +445,15 @@ h2, .about p {
 }
 
 .menu-content a {
-  color: #fff; /* Text color for links */
+  color: #fff; 
   text-decoration: none;
   margin: 10px;
   font-size: 1.5rem;
-  transition: color 0.3s ease; /* Smooth color transition */
+  transition: color 0.3s ease; 
 }
 
 .menu-content a:hover {
-  color: #8E44AD; /* Highlight color on hover */
+  color: #8E44AD;
 }
 
 .logo{
@@ -505,3 +471,20 @@ h2, .about p {
   text-align: center;
   margin-top: 200px;
 }
+
+.about-p {
+  text-align: left;
+  margin-top: 50px;
+  padding-right: 40%;
+}
+
+p {
+  font-family: 'Oswald', 'Playfair Display', sans-serif; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+h2 {
+  font-family: 'Fjalla One', sans-serif;
+}
+

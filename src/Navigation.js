@@ -1,4 +1,3 @@
-// Navigation.js
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { HiOutlineMenu } from 'react-icons/hi';
@@ -18,7 +17,7 @@ const Navigation = () => {
   return (
     <nav className={`Navigation ${open ? 'open' : ''}`}>
       {open ? CloseIcon : HamburgerIcon}
-      <a href="/"> {/* Adjust the link accordingly */}
+      <a href="/"> 
 
       {!open && <img src={Logo} alt="Logo" className="logo" />}
       </a>
@@ -27,7 +26,6 @@ const Navigation = () => {
           <NavLink to='/' onClick={() => setOpen(false)}>Home</NavLink>
           <NavLink to='/about' onClick={() => setOpen(false)}>About</NavLink>
           <NavLink to='/works' onClick={() => setOpen(false)}>Works</NavLink>
-          {/* Add other navigation links as needed */}
         </div>
       )}
     </nav>
