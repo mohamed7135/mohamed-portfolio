@@ -70,7 +70,7 @@ function PageHome() {
       <div className="about" ref={aboutRef}>
         <h2>About</h2>
         <br />
-        <p>Hello there! I'm a passionate Front-End Web Developer on a perpetual journey of discovery and growth. My love for crafting seamless digital experiences is fueled by a deep commitment to learning and adapting in the ever-evolving world of web development. Beyond the code, you'll find me embracing challenges with enthusiasm, bringing a blend of adaptability and quick learning to every project. My goal? To not just meet expectations but to exceed them, pushing the boundaries of what's possible in the dynamic field of front-end development. Let's create something extraordinary together!</p>
+        <p className='about-home'>Hello there! I'm a passionate Front-End Web Developer on a perpetual journey of discovery and growth. My love for crafting seamless digital experiences is fueled by a deep commitment to learning and adapting in the ever-evolving world of web development. Beyond the code, you'll find me embracing challenges with enthusiasm, bringing a blend of adaptability and quick learning to every project. My goal? To not just meet expectations but to exceed them, pushing the boundaries of what's possible in the dynamic field of front-end development. Let's create something extraordinary together!</p>
         <br />
         <a href="/about"> 
           <button className="button-arounder">Find out more!</button>
