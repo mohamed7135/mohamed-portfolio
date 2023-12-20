@@ -473,6 +473,7 @@ p {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
+  align-items: center;
 }
 
 .skillz {
@@ -500,3 +501,6 @@ h2, h3 {
   text-align: left;
 }
 
+.unique-project {
+  padding: 5%;
+}

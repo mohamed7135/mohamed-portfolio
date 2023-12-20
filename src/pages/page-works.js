@@ -8,9 +8,8 @@ function PageWorks() {
   return (
     <div>
       <div className="project">
-        <h1>Works</h1>
-        <br />
-
+      <h1>Works</h1>
+        <div className='unique-project'>
         <h2>React Movie Project (Movie Cat)</h2>
         <img src={MovieCat} alt="Movie Cat" />
         <div className="icon-row">
@@ -26,10 +25,12 @@ function PageWorks() {
         <a href="https://justiny.ca/moviecat/" target="_blank" rel="noopener noreferrer">
           <button>View Project</button>
         </a>
+        </div>
 
-        <br />
-        <br />
+        {/* <br />
+        <br /> */}
 
+        <div className='unique-project'>
         <h2>Capstone Project</h2>
         <img src={Capstone} alt="Capstone Project" />
         <div className="icon-row">
@@ -49,9 +50,11 @@ function PageWorks() {
         <a href="https://fithub.bcitwebdeveloper.ca/" target="_blank" rel="noopener noreferrer">
           <button>View Project</button>
         </a>
-        <br />
-        <br />
+        </div>
+        {/* <br />
+        <br /> */}
 
+        <div className='unique-project'>
         <h2>Portfolio</h2>
         <img src={Portfolio} alt="Portfolio" />
         <div className="icon-row">
@@ -67,6 +70,7 @@ function PageWorks() {
         <a href="/">
           <button>Back to Home</button>
         </a>
+        </div>
       </div>
 
       <Footer />
