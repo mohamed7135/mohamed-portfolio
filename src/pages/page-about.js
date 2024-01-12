@@ -3,13 +3,14 @@ import Footer from '../Footer';
 import '../App.css';
 import technologiesImage from '../images/technologies.jpg';
 import boardGamesImage from '../images/Board-games.jpg';
-import esportsImage from '../images/Esports.jpg';
+import esportsImage from '../images/gaming.jpg';
 import sportsImage from '../images/nba.jpg';
 import ultimateImage from '../images/Ultimate.jpg';
 import gymImage from '../images/Gym.jpg';
 import cheesecakeImage from '../images/Cheesecake.jpg';
 import mentorImage from '../images/Mentor.jpg';
 import bikeImage from '../images/Bike.jpg';
+import aboutImage from '../images/about-photo.jpeg';
 
 function PageAbout() {
   const facts = [
@@ -53,16 +54,21 @@ function PageAbout() {
     <div className="about-me">
       <h2>About Me</h2>
       <br />
+     <div className='about-flex'>
       <div className='about-p'>
-        <p>Welcome to my corner of the web! I'm an ardent Front-End Web Developer with a perpetual thirst for knowledge and growth. My journey in web development is not just a career but a passionate exploration. I find joy in the intricate dance between creativity and functionality, constantly seeking to enhance the digital landscape with innovative and user-centric interfaces.
+          <p>Welcome to my corner of the web! I'm an ardent Front-End Web Developer with a perpetual thirst for knowledge and growth. My journey in web development is not just a career but a passionate exploration. I find joy in the intricate dance between creativity and functionality, constantly seeking to enhance the digital landscape with innovative and user-centric interfaces.
+            <br />
+            My motivation is deeply rooted in the belief that web development is an art form, and each line of code is a brushstroke that shapes a unique online experience. I thrive on challenges, viewing them not as obstacles but as opportunities to push the boundaries of what's possible. Beyond mastering languages like JavaScript, HTML5 & CSS/SASS, I bring a holistic approach, incorporating UI/UX design principles and leveraging version control tools like Git.
+            <br />
+            In collaborative environments, I'm the curious mind always seeking to learn and contribute. My journey goes beyond formal education; I immerse myself in the latest industry trends, ensuring my work aligns with the cutting edge. Eager to contribute my skills to projects that redefine web development standards, I bring adaptability, enthusiasm, and a growing skill set to every endeavor.
+            <br />
+            So, if you're looking to embark on a digital journey that goes beyond the ordinary, let's collaborate and craft something extraordinary together! Your vision, my code – a perfect match for creating impactful online experiences.</p>
           <br />
-          My motivation is deeply rooted in the belief that web development is an art form, and each line of code is a brushstroke that shapes a unique online experience. I thrive on challenges, viewing them not as obstacles but as opportunities to push the boundaries of what's possible. Beyond mastering languages like JavaScript, HTML5 & CSS/SASS, I bring a holistic approach, incorporating UI/UX design principles and leveraging version control tools like Git.
-          <br />
-          In collaborative environments, I'm the curious mind always seeking to learn and contribute. My journey goes beyond formal education; I immerse myself in the latest industry trends, ensuring my work aligns with the cutting edge. Eager to contribute my skills to projects that redefine web development standards, I bring adaptability, enthusiasm, and a growing skill set to every endeavor.
-          <br />
-          So, if you're looking to embark on a digital journey that goes beyond the ordinary, let's collaborate and craft something extraordinary together! Your vision, my code – a perfect match for creating impactful online experiences.</p>
-        <br />
-      </div>
+        </div>
+        <div>
+        <img src={aboutImage} className='Mohamed-photo' alt="Mohamed Ahmed headshot." />
+        </div>
+     </div>
 
       <div className='hobbies'>
         <h2>My Hobbies & Passions</h2>

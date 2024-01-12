@@ -392,6 +392,12 @@ p {
   opacity: 1;
   transition: opacity 600ms;
 }
+.about-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
 
 @media (max-width: 901px) {
   .gallery figure {
@@ -414,6 +420,13 @@ p {
     transform: translate3d(0, 0, 0);
     transition: opacity 600ms, transform 600ms;
     z-index: 2; 
+  }
+
+  .about-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
   }
 }
 
@@ -484,7 +497,7 @@ p {
 .about-p {
   text-align: left;
   margin-top: 50px;
-  padding-right: 40%;
+  padding-right: 10%;
 }
 
 p {
@@ -504,3 +517,8 @@ h2, h3 {
 .unique-project {
   padding: 5%;
 }
+
+.Mohamed-photo {
+  border-radius: 50%;
+}
+

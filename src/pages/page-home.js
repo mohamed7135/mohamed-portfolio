@@ -80,20 +80,22 @@ function PageHome() {
       <div className="works" ref={worksRef}>
         <h2>Works</h2>
         <div className='works-flex'>
-          <div className="project">
-            <h3>React Movie Project (Movie Cat)</h3>
-            <img src={MovieCat} alt="Movie Cat" />
-            <p>Dive into the React Movie Project (Movie Cat), where I honed skills in HTML5, JavaScript, Sass, GitHub, and React, crafting dynamic interfaces and gaining proficiency in state management, API handling, and component structuring.</p>
-            <a href="/works"> 
-              <button>View Works</button>
-            </a>
-          </div>
 
           <div className="project">
             <h3>Capstone Project</h3>
             <img src={Capstone} alt="Capstone Project" />
             <p>Embark on the FitHub journey, my Capstone project, where collaborative efforts birthed a fitness-focused website using HTML5, JavaScript, Sass, PHP, WordPress, WooCommerce, and GitHub. This experience emphasized teamwork, providing valuable insights into crafting complex web solutions and thriving in a collaborative environment.</p>
             <a href="/works">
+              <button>View Works</button>
+            </a>
+          </div>
+
+
+          <div className="project">
+            <h3>React Movie Project (Movie Cat)</h3>
+            <img src={MovieCat} alt="Movie Cat" />
+            <p>Dive into the React Movie Project (Movie Cat), where I honed skills in HTML5, JavaScript, Sass, GitHub, and React, crafting dynamic interfaces and gaining proficiency in state management, API handling, and component structuring.</p>
+            <a href="/works"> 
               <button>View Works</button>
             </a>
           </div>

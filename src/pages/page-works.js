@@ -9,28 +9,8 @@ function PageWorks() {
     <div>
       <div className="project">
       <h1>Works</h1>
-        <div className='unique-project'>
-        <h2>React Movie Project (Movie Cat)</h2>
-        <img src={MovieCat} alt="Movie Cat" />
-        <div className="icon-row">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" alt="HTML5" width="24" height="24" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="24" height="24" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass" width="24" height="24" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="24" height="24" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="24" height="24" />
-        </div>
-        <p>
-          Immersing myself in the captivating realm of the React Movie Project, affectionately dubbed Movie Cat, was a collaborative journey where I seamlessly integrated HTML5, JavaScript, Sass, GitHub, and React technologies. As a vital member of a dynamic team, this experience not only enriched my technical proficiency but also showcased my adeptness in teamwork. The project unfolded as a canvas for honing my skills in constructing responsive and dynamic user interfaces, unraveling the intricate dance of managing state, deftly handling API requests, and architecting cohesive components within the intricate tapestry of a React application. Through the lens of collaboration, this endeavor became a testament to my prowess not just in technology but in the art of effective teamwork, where synergy elevated the project beyond the sum of its individual parts.
-        </p>
-        <a href="https://justiny.ca/moviecat/" target="_blank" rel="noopener noreferrer">
-          <button>View Project</button>
-        </a>
-        </div>
 
-        {/* <br />
-        <br /> */}
-
-        <div className='unique-project'>
+      <div className='unique-project'>
         <h2>Capstone Project</h2>
         <img src={Capstone} alt="Capstone Project" />
         <div className="icon-row">
@@ -51,6 +31,28 @@ function PageWorks() {
           <button>View Project</button>
         </a>
         </div>
+        {/* <br />
+        <br /> */}
+
+        
+        <div className='unique-project'>
+        <h2>React Movie Project (Movie Cat)</h2>
+        <img src={MovieCat} alt="Movie Cat" />
+        <div className="icon-row">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" alt="HTML5" width="24" height="24" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="24" height="24" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass" width="24" height="24" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="24" height="24" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="24" height="24" />
+        </div>
+        <p>
+          Immersing myself in the captivating realm of the React Movie Project, affectionately dubbed Movie Cat, was a collaborative journey where I seamlessly integrated HTML5, JavaScript, Sass, GitHub, and React technologies. As a vital member of a dynamic team, this experience not only enriched my technical proficiency but also showcased my adeptness in teamwork. The project unfolded as a canvas for honing my skills in constructing responsive and dynamic user interfaces, unraveling the intricate dance of managing state, deftly handling API requests, and architecting cohesive components within the intricate tapestry of a React application. Through the lens of collaboration, this endeavor became a testament to my prowess not just in technology but in the art of effective teamwork, where synergy elevated the project beyond the sum of its individual parts.
+        </p>
+        <a href="https://justiny.ca/moviecat/" target="_blank" rel="noopener noreferrer">
+          <button>View Project</button>
+        </a>
+        </div>
+
         {/* <br />
         <br /> */}
 
